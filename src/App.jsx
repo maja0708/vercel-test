@@ -23,24 +23,23 @@ function App() {
 return (
   <BrowserRouter>
     <div className="min-h-screen bg-gray-100 text-gray-800">
-
       <Navbar />
-      <Contexts/>
-
-      <div style={{ padding: "20px" }}>
-        <CurrentUserBadge />
-        <LoginButton />
-      </div>
-
       <main className="max-w-6xl mx-auto px-6 py-10 space-y-10">
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
         </Routes>
 
-
-
+        <section className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white shadow-md rounded-2xl p-6">
+          <CurrentUserBadge />
+          <LoginButton />
+          </div>
+          <div className="bg-white shadow-md rounded-2xl p-6">
+          <Contexts/>
+          </div>
+        </section>
+   
         {/* Forms Section */}
          <section className="grid md:grid-cols-2 gap-6">
           <div className="w-full max-w-2xl bg-white shadow-xl rounded-2xl p-8">
